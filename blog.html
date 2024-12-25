@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-image: url(peakpx\ \(3\).jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .container{
+            height: 145vh;
+            width: 80vw;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            background-image: url(peakpx\ \(1\).jpg);
+            box-shadow: -1px 2px 5px 18px rgba(0, 0, 0, 0.75);
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        .headerContainer{
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        .headerContainer h2{
+            font-size: 3rem;
+            width: 1;
+        }
+        #webDesc{
+            width: 668px;
+            font-size: larger;
+        }
+        .cardContainer{
+            width: 100%;
+            /* padding-left: 4rem; */
+            display: grid;
+            /* flex-direction: column; */
+            margin-top: -20px;
+            margin-left: -20px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,1fr);
+            
+        }
+        
+        .card{
+            width: 95%;
+            border: 1px solid rgb(122, 116, 116);
+            gap: 10px;
+            border-radius: 10px;
+            background-size: cover;
+            margin: 25px;
+            background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+            margin-bottom: -10px;
+            overflow: hidden;
+        }
+        .card:hover #cardImg{
+            transform: scale(1.1);
+            transition: transform 0.7s ease;
+        }
+        #cardImg{
+            height: 10rem;
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;            
+        }
+        .cardDesc{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        .cardFooter{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 10px;
+            margin-left: -10px;
+        }
+        #authorImg{
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        .authorDetail{
+            margin-left: 5px;
+        }
+        .leftBox{
+            display: flex;
+        }
+        .leftBox p{
+            font-size: 14px;
+        }
+        .leftBox a{
+            text-decoration: none;
+            color: rgb(0, 8, 255);
+            font-size: 15px;
+        }
+       
+        .rightBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .rightBox input{
+            height: 25px;
+            width: 80px;
+            border-radius: 4px;
+            border: 1px solid rgb(73, 67, 67);
+            color: white;
+            border: none;
+            background-color: black;
+            font-weight: bold;
+            transition: 0.7s;
+        }
+
+        .rightBox input:hover{
+            background-color: rgb(6, 11, 153);
+            color: white;
+        }
+
+        @media (max-width:650px){
+            .cardContainer{
+            grid-template-columns: repeat(2,0.5fr);
+        }
+        }
+
+        @media (min-width:650px){
+            .cardContainer{
+            grid-template-columns: repeat(2,1fr);
+        }
+        }
+
+        @media (min-width:1080px){
+            .cardContainer{
+            grid-template-columns: repeat(3,1fr);
+        }
+        }
+
+        @media (min-width:1340px){
+            .cardContainer{
+            grid-template-columns: repeat(4,1fr);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <header class="headerContainer">
+                <h2 id="webName">Al-Araish Blogs</h2>
+                <p id="webDesc">Utilate this space to incorporate a captivating and subheading
+                    crafted by CHATGPT, adding depth and intrigue to your blog
+                </p>
+            </header>
+        <div class="cardContainer">
+           
+                <!-- card 1 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?gadgets=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>New Gadgets Released</h4>
+                        <p>Check out the latest tech gadgets hitting the market, from
+                            smartphones to smartWatches and many more
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">John Doe</a></p>
+                                <p>Sept 19,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Technology">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 1 ends here -->
+
+                <!-- card 2 starts here -->
+                <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?healthy=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>Healthy Eating Tips</h4>
+                        <p>Discover simple tips for maintaining a healthy diet and making 
+                            nutritious food choices and great diet
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=9" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Emily Smith</a></p>
+                                <p>August 5,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Nutrition">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 2 ends here -->
+
+                 <!-- card 3 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?travel-bucket-list=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>Travel Bucket List</h4>
+                        <p>Explore breathtaking destination and add them to your travel 
+                            bucket list for an unforgettable adventure
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=8" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">David Johnson</a></p>
+                                <p>June 28,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Travel">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 3 ends here -->
+
+                 <!-- card 4 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?productivity=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>Effective Time Management</h4>
+                        <p>Learn time management techniques to boost productivity and 
+                            balance work and personal life
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Sarah Wilson</a></p>
+                                <p>Sept 12,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Productivity">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 4 ends here -->
+
+                 <!-- card 5 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?meditation=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>Art of mindfulness</h4>
+                        <p>Discover the power of mindfulness meditation for reducing stress 
+                            and improving mental well-being 
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Mark Anderson</a></p>
+                                <p>July 19,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Meditation">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 5 ends here -->
+
+                 <!-- card 6 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?home-decoration=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>DIY Home Decor</h4>
+                        <p>Get creative with DIY home decor projects that will transform
+                            your living space on a budget and make your life stylish
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=23" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Laura William</a></p>
+                                <p>August 11,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Home Decor">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 6 ends here -->
+
+                 <!-- card 7 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?eco-friendly=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>Green Energy Solutions</h4>
+                        <p>Explore eco-friendly Energy Solutions for a sustainable future
+                            and reducing your carbon footprint
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=19" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Kyle Mckenna</a></p>
+                                <p>Dec 16,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Sustainability">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 7 ends here -->
+
+                 <!-- card 8 starts here -->
+                 <div class="card">
+                    <div class="cardImg">
+                        <img id="cardImg" src="https://picsum.photos/200/200?positivity=9" alt="">
+                    </div>
+                    <div class="cardDesc">
+                        <h4>The Power of Positivity </h4>
+                        <p>Discover how a positive minset can improve your life and lead to 
+                            greater happiness and success and changes in your life
+                        </p>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="leftBox">
+                            <img src="https://i.pravatar.cc/150?img=68" alt="" id="authorImg">
+                            <div class="authorDetail">
+                                <p><a href="">Chris Evans</a></p>
+                                <p>August 25,2021</p>
+                            </div>
+                           
+                        </div>
+                        <div class="rightBox">
+                            <input type="button" value="Positivity">
+                        </div>
+                    </div>
+
+                 </div>
+                 <!-- card 8 ends here -->     
+        </div>
+    </div>
+</body>
+</html>
